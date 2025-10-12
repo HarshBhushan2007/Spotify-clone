@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:antiquewhite;
+}
+
+nav{
+font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 55px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width:44px ;
+    padding: 0 8px; 
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;}
+
+    .container{
+     height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'varela round', sans-serif;
+    display: flex;
+    margin:23px auto ;
+    width: 78%;
+    border-radius:12px ;
+    padding: 34px;
+    background-image: url('WhatsApp\ Image\ 2025-10-05\ at\ 00.18.57_0f2d044e.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .bottom{
+        position: sticky;
+        height:80px;
+        background-color: black;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+    }
+
+   #myprogressbar{
+    width: 80vw ;
+    cursor: pointer;
+
+  }
+
+  .icons{
+   font-size: 40px;
+  margin-top: 14px;
+  }
+
+  .icons i{
+    cursor: pointer;
+  }
+
+  .songitem{
+height: 50px;
+display: flex;
+background-color: white;
+/* width: 80%; */
+color: black;
+margin: 12px 0 ;
+justify-content: space-between;
+align-items: center;
+border-radius: 36px;
+
+  }
+
+  .songitem img{
+    width: 45px;
+    margin:23px ;
+    border-radius: 32px;
+  }
+
+  .timespan{
+ margin: 0 23px;
+  }
+
+  .timespan i{
+    cursor: pointer;
+  }
