@@ -1,84 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spotify- your favoutite music is here</title>
+
+    <title>My Spotify Player</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
     <nav>
-        <ul>
-            <li class="brand"><img src="icons8-spotify-48.png" alt="">Spotify</li>
-            <li>Home</li>
-            <li>About</li>
-        </ul>
+        <div class="brand">
+            <img src="Image/logo.webp">
+            <span>Spotify</span>
+        </div>
+
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#songs">Music</a>
+            <a href="#about">About</a>
+        </div>
     </nav>
 
-    <div class="container">
-        <div class="songlist">
-            <h1>best of NCS- No copyright sound</h1>
-            <div>
-                <div class="songitem">
-                    <img src="image.jpg" alt="1 ">
-                    <span>Fear song</span>
-               <span class="songlistplay"><span class="timespan">03:15 <i class="fa-solid fa-circle-play" id="Fear"  style="color: #0d0d0d;"></i></span></span>
-                </div>
 
-                <div class="songitem">
-                    <img src="artworks-0zuvZaZkqS7rwfi9-ywIFMA-t1080x1080.webp" alt="1">
-                    <span>Rolex BGM</span>
-               <span class="songlistplay"><span class="timespan">05:34 <i class="fa-solid fa-circle-play" id="Rolex"  style="color: #0d0d0d;"></i></span></span>
-                </div>
+    <!-- HERO -->
+    <section class="hero">
 
-                <div class="songitem">
-                    <img src="size_m_1713520236.webp" alt="1 ">
-                    <span>let me love you</span>
-               <span class="songlistplay"><span class="timespan">05:34 <i class="fa-solid fa-circle-play" id="element" style="color: #0d0d0d;"></i></span></span>
-                </div>
+        <div class="hero-text">
 
-                <div class="songitem">
-                    <img src="size_m_1713520236.webp" alt="1 ">
-                    <span>let me love you</span>
-               <span class="songlistplay"><span class="timespan">05:34 <i class="fa-solid fa-circle-play" id="element" style="color: #0d0d0d;"></i></span></span>
-                </div>
+            <small>YOUR MUSIC SPACE</small>
 
-                <div class="songitem">
-                    <img src="size_m_1713520236.webp" alt="1 ">
-                    <span>let me love you</span>
-               <span class="songlistplay"><span class="timespan">05:34 <i class="fa-solid fa-circle-play" id="element" style="color: #0d0d0d;"></i></span></span>
-                </div>
+            <h1>
+                Music that
+                <span>moves you.</span>
+            </h1>
 
-                <div class="songitem">
-                    <img src="size_m_1713520236.webp" alt="1 ">
-                    <span>let me love you</span>
-               <span class="songlistplay"><span class="timespan">05:34 <i class="fa-solid fa-circle-play" id="element" style="color: #0d0d0d;"></i></span></span>
-                </div>
+            <p>
+                Listen to your favourite songs with a
+                simple and modern music experience.
+            </p>
 
-                <div class="songitem">
-                    <img src="size_m_1713520236.webp" alt="1 ">
-                    <span>let me love you</span>
-               <span class="songlistplay"><span class="timespan">05:34 <i class="fa-solid fa-circle-play" id="element" style="color: #0d0d0d;"></i></span></span>
-                </div>
-            </div>
+            <button id="heroPlay">
+                ▶ Play Music
+            </button>
+
         </div>
-        <div class="songbanner"></div>
+
+
+        <div class="hero-image">
+
+            <img
+                id="mainImage"
+                src="naach-meri-rani.jpg"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC -->
+    <section class="music" id="songs">
+
+        <div class="heading">
+
+            <div>
+                <small>YOUR COLLECTION</small>
+                <h2>Featured Music</h2>
+            </div>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search..."
+            >
+
+        </div>
+
+
+        <div id="songList"></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <img src="Image/sound-8825_256.gif">
+
+        <div>
+            <small>NOW PLAYING</small>
+
+            <h2 id="songTitle">
+                Naach Meri Rani
+            </h2>
+
+            <p id="artist">
+                Guru Randhawa
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- PLAYER -->
+    <div class="player">
+
+        <div class="now">
+
+            <img
+                id="playerImage"
+                src="naach-meri-rani.jpg"
+            >
+
+            <div>
+                <b id="playerTitle">
+                    Naach Meri Rani
+                </b>
+
+                <small id="playerArtist">
+                    Guru Randhawa
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="controls">
+
+            <div>
+
+                <button id="prev">
+                    ⏮
+                </button>
+
+                <button
+                    id="play"
+                    class="play"
+                >
+                    ▶
+                </button>
+
+                <button id="next">
+                    ⏭
+                </button>
+
+            </div>
+
+
+            <div class="progress">
+
+                <span id="current">
+                    0:00
+                </span>
+
+                <input
+                    type="range"
+                    id="progress"
+                    value="0"
+                    min="0"
+                    max="100"
+                >
+
+                <span id="total">
+                    0:00
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="bottom">
-       <input type="range" name="range" id="myprogressbar" value="0" min="0" max="100">
-       <div class="icons">
-        <!-- fontawesome icons -->
-         <i class="fa-solid fa-forward-step" style="color: #f3f8f6;"></i>
-          <i class="fa-solid fa-circle-play" id="masterplay" style="color: #ebf2f0;"></i>
-         <i class="fa-solid fa-backward-step" style="color: #edf0ef;"></i>
-       </div>
-       <div class="songinfo">
-       <!-- <img src="sound-8825_256.gif" alt="1"> -->
-       </div>
 
-    </div>
-    <script src="https://kit.fontawesome.com/946f2ac081.js" crossorigin="anonymous"></script>
+    <audio id="audio"></audio>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
