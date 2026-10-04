@@ -23,11 +23,7 @@ const artist = document.getElementById("artist");
 const playerTitle = document.getElementById("playerTitle");
 const playerArtist = document.getElementById("playerArtist");
 
-
-/* SONGS */
-
 const songs = [
-
     {
         name: "Naach Meri Rani",
         artist: "Guru Randhawa",
@@ -48,17 +44,11 @@ const songs = [
         file: "Song/Alan_Walker_-_Faded_Vocal_Mix_(mp3.pm).mp3",
         image: "song image/artworks-000155676834-3935wq-t1080x1080.webp"
     }
-
 ];
-
 
 let index = 0;
 
-
-/* LOAD SONG */
-
 function loadSong(i, auto = false) {
-
     index = i;
 
     const song = songs[index];
@@ -81,38 +71,24 @@ function loadSong(i, auto = false) {
     }
 }
 
-
-/* PLAY */
-
 function togglePlay() {
-
     if (audio.paused) {
-
         audio.play();
 
         play.innerText = "❚❚";
         heroPlay.innerText = "❚❚ Playing";
-
     } else {
-
         audio.pause();
 
         play.innerText = "▶";
         heroPlay.innerText = "▶ Play Music";
-
     }
-
 }
-
 
 play.onclick = togglePlay;
 heroPlay.onclick = togglePlay;
 
-
-/* NEXT */
-
 next.onclick = () => {
-
     index++;
 
     if (index >= songs.length) {
@@ -120,14 +96,9 @@ next.onclick = () => {
     }
 
     loadSong(index, true);
-
 };
 
-
-/* PREVIOUS */
-
 prev.onclick = () => {
-
     index--;
 
     if (index < 0) {
@@ -135,14 +106,9 @@ prev.onclick = () => {
     }
 
     loadSong(index, true);
-
 };
 
-
-/* PROGRESS */
-
 audio.ontimeupdate = () => {
-
     if (!audio.duration) return;
 
     progress.value =
@@ -150,39 +116,23 @@ audio.ontimeupdate = () => {
 
     current.innerText =
         formatTime(audio.currentTime);
-
 };
-
 
 audio.onloadedmetadata = () => {
-
     total.innerText =
         formatTime(audio.duration);
-
 };
-
 
 progress.oninput = () => {
-
     audio.currentTime =
         (progress.value / 100) * audio.duration;
-
 };
-
-
-/* SONG ENDED */
 
 audio.onended = () => {
-
     next.click();
-
 };
 
-
-/* FORMAT TIME */
-
 function formatTime(seconds) {
-
     let min =
         Math.floor(seconds / 60);
 
@@ -194,18 +144,12 @@ function formatTime(seconds) {
     }
 
     return min + ":" + sec;
-
 }
 
-
-/* SONG LIST */
-
 function renderSongs() {
-
     songList.innerHTML = "";
 
     songs.forEach((song, i) => {
-
         const div =
             document.createElement("div");
 
@@ -214,13 +158,10 @@ function renderSongs() {
             (i === index ? "active" : "");
 
         div.innerHTML = `
-
             <div class="song-left">
-
                 <img src="${song.image}">
 
                 <div>
-
                     <div class="song-name">
                         ${song.name}
                     </div>
@@ -228,39 +169,27 @@ function renderSongs() {
                     <div class="artist">
                         ${song.artist}
                     </div>
-
                 </div>
-
             </div>
 
             <button>▶</button>
-
         `;
 
         div.onclick = () => {
-
             loadSong(i, true);
-
         };
 
         songList.appendChild(div);
-
     });
-
 }
 
-
-/* SEARCH */
-
 search.oninput = () => {
-
     const value =
         search.value.toLowerCase();
 
     document
         .querySelectorAll(".song")
         .forEach((song, i) => {
-
             const name =
                 songs[i].name.toLowerCase();
 
@@ -268,12 +197,7 @@ search.oninput = () => {
                 name.includes(value)
                     ? "flex"
                     : "none";
-
         });
-
 };
-
-
-/* START */
 
 loadSong(0);

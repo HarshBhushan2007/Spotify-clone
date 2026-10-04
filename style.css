@@ -11,18 +11,13 @@ body {
     padding-bottom: 120px;
 }
 
-
-/* NAVBAR */
-
 nav {
     height: 70px;
     width: 90%;
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     border-bottom: 1px solid #222;
 }
 
@@ -30,7 +25,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-
     font-size: 22px;
     font-weight: bold;
 }
@@ -55,24 +49,16 @@ nav {
     color: #1ed760;
 }
 
-
-/* HERO */
-
 .hero {
     width: 90%;
     max-width: 1200px;
     min-height: 500px;
-
     margin: 30px auto;
-
     padding: 60px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     border-radius: 25px;
-
     background:
         linear-gradient(
             90deg,
@@ -80,7 +66,6 @@ nav {
             rgba(0,0,0,.4)
         ),
         url("Image/WhatsApp Image 2025-10-05 at 00.18.57_0f2d044e.jpg");
-
     background-size: cover;
     background-position: center;
 }
@@ -113,13 +98,10 @@ nav {
 .hero button {
     margin-top: 25px;
     padding: 14px 25px;
-
     border: none;
     border-radius: 30px;
-
     background: #1ed760;
     color: black;
-
     font-weight: bold;
     cursor: pointer;
 }
@@ -128,24 +110,15 @@ nav {
     transform: scale(1.05);
 }
 
-
-/* HERO IMAGE */
-
 .hero-image img {
     width: 320px;
     height: 320px;
-
     object-fit: cover;
-
     border-radius: 20px;
-
     box-shadow:
         0 20px 60px
         rgba(0,0,0,.7);
 }
-
-
-/* MUSIC */
 
 .music {
     width: 90%;
@@ -157,7 +130,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin-bottom: 20px;
 }
 
@@ -168,34 +140,21 @@ nav {
 #search {
     background: #171717;
     border: 1px solid #333;
-
     color: white;
-
     padding: 12px 18px;
-
     border-radius: 25px;
-
     outline: none;
 }
-
-
-/* SONG */
 
 .song {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 12px;
-
     margin: 8px 0;
-
     background: #151515;
-
     border-radius: 12px;
-
     cursor: pointer;
-
     transition: .2s;
 }
 
@@ -214,9 +173,7 @@ nav {
 .song img {
     width: 55px;
     height: 55px;
-
     object-fit: cover;
-
     border-radius: 8px;
 }
 
@@ -233,40 +190,28 @@ nav {
 .song button {
     width: 38px;
     height: 38px;
-
     border: none;
     border-radius: 50%;
-
     background: #1ed760;
     cursor: pointer;
 }
 
-
-/* ABOUT */
-
 .about {
     width: 90%;
     max-width: 1100px;
-
     margin: 40px auto;
-
     padding: 25px;
-
     display: flex;
     align-items: center;
     gap: 20px;
-
     background: #151515;
-
     border-radius: 20px;
 }
 
 .about img {
     width: 70px;
     height: 70px;
-
     object-fit: cover;
-
     border-radius: 10px;
 }
 
@@ -275,34 +220,21 @@ nav {
     margin-top: 5px;
 }
 
-
-/* PLAYER */
-
 .player {
     position: fixed;
-
     bottom: 15px;
     left: 50%;
-
     transform: translateX(-50%);
-
     width: 90%;
     max-width: 1200px;
-
     padding: 12px 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: rgba(20,20,20,.95);
-
     border: 1px solid #333;
-
     border-radius: 18px;
-
     backdrop-filter: blur(15px);
-
     z-index: 100;
 }
 
@@ -310,16 +242,13 @@ nav {
     display: flex;
     align-items: center;
     gap: 12px;
-
     width: 25%;
 }
 
 .now img {
     width: 50px;
     height: 50px;
-
     object-fit: cover;
-
     border-radius: 7px;
 }
 
@@ -337,22 +266,16 @@ nav {
 .controls button {
     border: none;
     background: transparent;
-
     color: white;
-
     font-size: 20px;
-
     margin: 0 12px;
-
     cursor: pointer;
 }
 
 .controls .play {
     width: 42px;
     height: 42px;
-
     border-radius: 50%;
-
     background: white;
     color: black;
 }
@@ -361,7 +284,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-
     margin-top: 8px;
 }
 
@@ -375,21 +297,15 @@ nav {
     accent-color: #1ed760;
 }
 
-
-/* MOBILE */
-
 @media(max-width: 700px) {
-
     .links {
         display: none;
     }
 
     .hero {
         padding: 35px 25px;
-
         flex-direction: column;
         gap: 40px;
-
         text-align: center;
     }
 
@@ -423,5 +339,4 @@ nav {
     .controls {
         width: 100%;
     }
-
 }
